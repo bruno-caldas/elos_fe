@@ -9,9 +9,10 @@ function Caldas({dados}) {
         </Head>
     <h1> Olá pessoal</h1>
 
+    {console.log(dados)}
     <p>Os dados que vem da nossa API de parceiros são:</p>
         <h1>Parceiros</h1>
-          {dados.map((dado) => ( <div>
+          {dados.map((dado) => ( <div key={dado.nome_parceiro}>
             <p><b>Nome do Parceiro:</b> {dado.nome_parceiro}</p>
             <p><b>Descrição:</b> {dado.descricao_parceiro}</p>
             <p><b>Site:</b> {dado.site_parceiro}</p>
@@ -26,7 +27,6 @@ export async function getStaticProps() {
   const res = await fetch('https://elos-be.herokuapp.com/api/parceiros/')
   const dados = await res.json();
 
-  console.log("oi")
   return {
     props: {
       dados
