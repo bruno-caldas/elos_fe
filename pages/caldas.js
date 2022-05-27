@@ -9,7 +9,6 @@ function Caldas({dados}) {
         </Head>
     <h1> Olá pessoal</h1>
 
-    {console.log(dados)}
     <p>Os dados que vem da nossa API de parceiros são:</p>
         <h1>Parceiros</h1>
           {dados.map((dado) => ( <div key={dado.nome_parceiro}>
