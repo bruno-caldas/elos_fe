@@ -1,4 +1,4 @@
-// import "./App.css";
+import "./App.css";
 
 import { useState, useEffect } from "react";
 
@@ -164,7 +164,5 @@ function Doadores() {
     </div>
   );
 }
-
-
 
 export default Doadores;
