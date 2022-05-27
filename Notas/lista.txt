@@ -1,0 +1,31 @@
+from django.db import models
+
+# Create your models here.
+
+class Doadores(models.Model):
+    id_doadores = models.AutoField(primary_key=True)
+         ## Impacto no meio ambiente
+
+    CDR = 'Cadeira de Rodas'
+    MLT = 'Muletas'
+    OCL = 'Oculos'
+                       
+    equips = (
+        (CDR, 'Cadeiras de Rodas'),
+        (MLT, 'Muletas'),
+        (OCL, 'Oculos'),
+        
+        )
+    equipamentos = models.CharField(choices=equips, verbose_name="Equipamento", max_length=50)
+    
+    NV = 'Novo'
+    US = 'Usado'
+                           
+    estado = (
+        (NV, 'Novo'),
+        (US, 'Usado'),
+                
+        )
+    status = models.CharField(choices=estado, verbose_name="Estado de Conservação", max_length=50)
+
+    Qauntidade = models.IntegerField(max_length=10, verbose_name='Quantidade de Itens')

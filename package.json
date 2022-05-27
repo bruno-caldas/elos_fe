@@ -7,7 +7,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^0.27.2",
+    "create-next-app": "^12.1.6",
     "next": "^12.1.7-canary.10",
+    "node-fetch": "^3.2.4",
     "react": "18.0.0",
     "react-dom": "18.0.0"
   },
