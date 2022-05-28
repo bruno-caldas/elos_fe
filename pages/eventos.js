@@ -26,7 +26,7 @@ function EventData({event_data}) {
 
             {event_data.map((dado) => (
 
-                  <div className="card mt-2 shadow">
+                  <div className="card mt-2 shadow" key={dado.nome_evento}>
                     <div className="card-header bg-secondary align-middle text-white">
                       <span className="material-icons align-middle fs-5">celebration</span>
                       <span className="align-middle card=title fs-5">{ dado.nome_evento }</span>
@@ -69,7 +69,7 @@ function EventData({event_data}) {
                       </div>
                     </div>
                   </div>
-                  
+
       ) ) }
 
                 </div>
