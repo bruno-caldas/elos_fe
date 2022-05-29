@@ -8,7 +8,7 @@ export default function Blog() {
         
     <Navbar></Navbar>
     
-  <div class="container-fluid">
+  <div className="container-fluid">
   <PageHeadParceiros></PageHeadParceiros>
 
   <h1>Em construção</h1>
