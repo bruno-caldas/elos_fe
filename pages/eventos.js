@@ -1,14 +1,17 @@
 import PageHeadMeta from "./page_head_meta";
-import PageHead from "./page_head";
+import PageHeadEventos from "./page_head_eventos";
+import Navbar from "./navbar";
+
 
 function EventData({event_data}) {
   return <>
   <PageHeadMeta></PageHeadMeta>
     {/* {console.log(event_data)} */}
           
+      <Navbar></Navbar>
     <div className="container-fluid">
-      <PageHead></PageHead>
     {/* <!-- Conteúdo Principal --> */}
+    <PageHeadEventos></PageHeadEventos>
       <div className="row justify-content-center mt-0">
         <div className="col-md-8 border-secondy justify-content-start">
           {/* <!-- Início do Accordion --> */}
@@ -142,16 +145,16 @@ function EventData({event_data}) {
 
 
 export async function getStaticProps() {
-  const res_get_token = await fetch('https://elos-be.herokuapp.com/api/token/', {
+  const res_get_token = await fetch(process.env.API_URL + 'token/', {
     method: 'POST',
-    body: JSON.stringify({ "username": "admin", "password": "admin" }),
+    body: JSON.stringify({ "username": process.env.username, "password": process.env.password }),
     headers: {
       'Content-Type': 'application/json',
     },
   })
   const raw_token = await res_get_token.json();
 
-  const res_get_data = await fetch('https://elos-be.herokuapp.com/api/eventos/', {
+  const res_get_data = await fetch(process.env.API_URL + 'eventos/', {
     method: 'GET',
     headers: {
       'Authorization': `Bearer ${raw_token.access}`,
