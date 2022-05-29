@@ -1,7 +1,7 @@
 import PageHeadMeta from "./page_head_meta";
 import PageHeadParceiros from "./page_head_parceiros";
 import Navbar from "./navbar";
-import env from '../.env.production.local';
+import env from '../.env';
 
 function Parceiros({dados}) {
   return <>

@@ -1,7 +1,7 @@
 import PageHeadMeta from "./page_head_meta";
 import PageHeadEventos from "./page_head_eventos";
 import Navbar from "./navbar";
-import env from '../.env.production.local';
+import env from '../.env';
 
 
 function EventData({event_data}) {
