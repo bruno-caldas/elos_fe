@@ -1,14 +1,17 @@
 import PageHeadMeta from "./page_head_meta";
-import PageHead from "./page_head";
+import PageHeadEventos from "./page_head_eventos";
+import Navbar from "./navbar";
+
 
 function EventData({event_data}) {
   return <>
   <PageHeadMeta></PageHeadMeta>
     {/* {console.log(event_data)} */}
           
+      <Navbar></Navbar>
     <div className="container-fluid">
-      <PageHead></PageHead>
     {/* <!-- Conteúdo Principal --> */}
+    <PageHeadEventos></PageHeadEventos>
       <div className="row justify-content-center mt-0">
         <div className="col-md-8 border-secondy justify-content-start">
           {/* <!-- Início do Accordion --> */}
