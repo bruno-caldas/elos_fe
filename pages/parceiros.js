@@ -1,10 +1,9 @@
 import PageHeadMeta from "./page_head_meta";
 import PageHeadParceiros from "./page_head_parceiros";
 import Navbar from "./navbar";
-import env from '../.env';
 
 function Parceiros({dados}) {
-  return <>
+  return <> {console.log(process.env.API_URL)}
     <PageHeadMeta></PageHeadMeta>
           
       <Navbar></Navbar>
@@ -45,16 +44,16 @@ function Parceiros({dados}) {
 
 
 export async function getStaticProps() {
-  const res_get_token = await fetch(env.API_URL + 'token/', {
+  const res_get_token = await fetch(process.env.API_URL + 'token/', {
     method: 'POST',
-    body: JSON.stringify({ "username": env.username, "password": env.password }),
+    body: JSON.stringify({ "username": process.env.username, "password": process.env.password }),
     headers: {
       'Content-Type': 'application/json',
     },
   })
   const raw_token = await res_get_token.json();
 
-  const res_get_data = await fetch(env.API_URL + 'parceiros/', {
+  const res_get_data = await fetch(process.env.API_URL + 'parceiros/', {
     method: 'GET',
     headers: {
       'Authorization': `Bearer ${raw_token.access}`,
