@@ -1,6 +1,7 @@
 import PageHeadMeta from "./page_head_meta";
 import PageHeadParceiros from "./page_head_parceiros";
 import Navbar from "./navbar";
+import env from '../.env.production.local';
 
 function Parceiros({dados}) {
   return <>
@@ -44,8 +45,22 @@ function Parceiros({dados}) {
 
 
 export async function getStaticProps() {
-  const res = await fetch('https://elos-be.herokuapp.com/api/parceiros/')
-  const dados = await res.json();
+  const res_get_token = await fetch(env.API_URL + 'token/', {
+    method: 'POST',
+    body: JSON.stringify({ "username": env.username, "password": env.password }),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+  const raw_token = await res_get_token.json();
+
+  const res_get_data = await fetch(env.API_URL + 'parceiros/', {
+    method: 'GET',
+    headers: {
+      'Authorization': `Bearer ${raw_token.access}`,
+    },
+  })
+  const dados = await res_get_data.json();
 
   return {
     props: {

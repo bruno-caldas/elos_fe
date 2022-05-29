@@ -1,6 +1,7 @@
 import PageHeadMeta from "./page_head_meta";
 import PageHeadEventos from "./page_head_eventos";
 import Navbar from "./navbar";
+import env from '../.env.production.local';
 
 
 function EventData({event_data}) {
@@ -145,16 +146,16 @@ function EventData({event_data}) {
 
 
 export async function getStaticProps() {
-  const res_get_token = await fetch('https://elos-be.herokuapp.com/api/token/', {
+  const res_get_token = await fetch(env.API_URL + 'token/', {
     method: 'POST',
-    body: JSON.stringify({ "username": "admin", "password": "admin" }),
+    body: JSON.stringify({ "username": env.username, "password": env.password }),
     headers: {
       'Content-Type': 'application/json',
     },
   })
   const raw_token = await res_get_token.json();
 
-  const res_get_data = await fetch('https://elos-be.herokuapp.com/api/eventos/', {
+  const res_get_data = await fetch(env.API_URL + 'eventos/', {
     method: 'GET',
     headers: {
       'Authorization': `Bearer ${raw_token.access}`,
