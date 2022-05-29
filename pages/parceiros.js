@@ -27,7 +27,7 @@ function Parceiros({dados}) {
               </div>
               <div className="col">
                 <p className="card-text">{ dado.descricao_parceiro }</p>
-                <a href="{{ dado.site_parceiro }}" className="btn btn-secondary" target="_blank">Confira aqui!</a>
+                <a href="{{ dado.site_parceiro }}" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">Confira aqui!</a>
               </div>
             </div>
           </div>
