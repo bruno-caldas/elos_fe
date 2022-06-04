@@ -2,7 +2,7 @@ import Script from 'next/script';
 
 export default function ScriptsBottom() {
   return <>
-  {/* incipal JavaScript do Bootstrap
+  {/* Principal JavaScript do Bootstrap
     ================================================== -->
     <!-- Foi colocado no final para a página carregar mais rápido -->
     <!-- JavaScript (Opcional) -->
