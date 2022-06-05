@@ -1,7 +1,8 @@
 import Link from 'next/link'
 
 export default function Navbar() {
-  return <>
+  return (
+    <>
   
     {/* <!-- Barra de navegação --> */}
     <nav className="fixed-top navbar navbar-expand-lg navbar-light bg-white shadow justify-content-center m-0 px-0 py-0">
@@ -20,10 +21,12 @@ export default function Navbar() {
         <!-- Menu -->   */}
         <div className="collapse navbar-collapse" id="navbarMenu">
           <ul className="navbar-nav">
-            <li className="nav-item"><Link href="/"><a className="nav-link active" aria-current="page">Elos</a></Link></li>
-            <li className="nav-item"><Link href="parceiros"><a className="nav-link">Parceiros</a></Link></li>
-            <li className="nav-item"><Link href="eventos"><a className="nav-link">Projetos e Eventos </a></Link></li>
-            <li className="nav-item"><Link href="blog"><a className="nav-link">Blog</a></Link></li>
+            <li className="nav-item">
+              <Link href="/"><a className="nav-link active" aria-current="page">Elos</a></Link>
+            </li>
+            <li className="nav-item"><Link href="/parceiros"><a className="nav-link">Parceiros</a></Link></li>
+            <li className="nav-item"><Link href="/eventos"><a className="nav-link">Projetos e Eventos </a></Link></li>
+            <li className="nav-item"><Link href="/blog"><a className="nav-link">Blog</a></Link></li>
           </ul>
           {/* <!-- Rede Social  --> */}
           <ul className="navbar-nav ml-auto">
@@ -70,4 +73,5 @@ export default function Navbar() {
       </div>
     </nav>
   </>
+  )
 }

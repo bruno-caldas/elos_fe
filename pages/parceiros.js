@@ -1,13 +1,7 @@
-import PageHeadMeta from "./page_head_meta";
 import PageHeadParceiros from "./page_head_parceiros";
-import Navbar from "./navbar";
 
 function Parceiros({dados}) {
-  return <> {console.log(process.env.API_URL)}
-    <PageHeadMeta></PageHeadMeta>
-          
-      <Navbar></Navbar>
-      
+  return <> {console.log(process.env.API_URL)}      
     <div className="container-fluid">
     <PageHeadParceiros></PageHeadParceiros>
 
