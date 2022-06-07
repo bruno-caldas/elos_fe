@@ -1,7 +1,8 @@
-import PageHeadParceiros from "./page_head_parceiros";
+import PageHeadParceiros from './page_head_parceiros'
 
 function Parceiros({dados}) {
-  return <> {console.log(process.env.API_URL)}      
+  return <> {console.log(process.env.API_URL)}
+         
     <div className="container-fluid">
     <PageHeadParceiros></PageHeadParceiros>
 

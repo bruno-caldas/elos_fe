@@ -1,11 +1,11 @@
 import Head from 'next/head'
 
 import '../styles/globals.css'
-import '../styles/bootstrap/css/carousel.css'
+import '../styles/bootstrap/css/bootstrap.min.css'
 import '../styles/bootstrap/css/blog.css'
-import '../styles/style.css'
+import '../styles/bootstrap/css/carousel.css'
 
-import Navbar from './navbar'
+import '../styles/style.css'
 
 // tag meta: https://nextjs.org/docs/messages/no-document-viewport-meta
 

@@ -1,7 +1,4 @@
-import PageHeadMeta from "./page_head_meta";
 import PageHeadEventos from "./page_head_eventos";
-import Navbar from "./navbar";
-
 
 function EventData({event_data}) {
   return <>

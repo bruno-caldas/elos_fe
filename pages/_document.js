@@ -1,5 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document'
-import Navbar from './navbar'
+import Navbar from '../src/components/navbar'
 
 // stylesheet: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
 

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import Carrossel from "./carrossel";
+import Carrossel from "../src/components/carrossel";
 
 export default function Home() {
   return (
