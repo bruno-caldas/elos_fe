@@ -1,6 +1,7 @@
 import PageHeadMeta from "./page_head_meta";
 import PageHeadEventos from "./page_head_eventos";
 import Navbar from "./navbar";
+import Link from "next/link";
 
 
 function EventData({event_data}) {
@@ -67,7 +68,7 @@ function EventData({event_data}) {
                           </div>
                         </div>
                         <div className="m-1">
-                          <a className="btn btn-secondary" href="https://www.google.com.br/maps/place/{{ evento.local_evento }}" role="button" target="_blank" rel="noopener noreferrer">Como chegar</a>
+                          <Link href="https://www.google.com.br/maps/place/{{ evento.local_evento }}"><a className="btn btn-secondary" role="button" target="_blank" rel="noopener noreferrer">Como chegar</a></Link>
                         </div>
                       </div>
                     </div>

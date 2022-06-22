@@ -1,6 +1,7 @@
 import PageHeadMeta from "./page_head_meta";
 import PageHeadParceiros from "./page_head_parceiros";
 import Navbar from "./navbar";
+import Link from 'next/link';
 
 function Parceiros({dados}) {
   return <> {console.log(process.env.API_URL)}
@@ -27,7 +28,7 @@ function Parceiros({dados}) {
               </div>
               <div className="col">
                 <p className="card-text">{ dado.descricao_parceiro }</p>
-                <a href="{{ dado.site_parceiro }}" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">Confira aqui!</a>
+                <Link href="{{ dado.site_parceiro }}"><a className="btn btn-secondary" target="_blank" rel="noopener noreferrer">Confira aqui!</a></Link>
               </div>
             </div>
           </div>
