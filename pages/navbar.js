@@ -7,7 +7,7 @@ export default function Navbar() {
     <nav className="fixed-top navbar navbar-expand-lg navbar-light bg-white shadow justify-content-center m-0 px-0 py-0">
       <div className="container mx-2">
         {/* <!-- Logo e Título do site --> */}
-        <Link href="/"><a className="navbar-brand h1 mb-8">
+        <Link legacyBehavior href="/"><a className="navbar-brand h1 mb-8">
             <img src="https://piunivesp.s3.sa-east-1.amazonaws.com/elos_de_amor/media/logo-elos_transparente.png" width="50" height="50" className="d-inline-block align-middle m-0 px-0 py-0" alt="logo"/>
             <spam className="align-middle" id="titulo">Elos de Amor</spam>
         </a></Link>
@@ -20,10 +20,10 @@ export default function Navbar() {
         <!-- Menu -->   */}
         <div className="collapse navbar-collapse" id="navbarMenu">
           <ul className="navbar-nav">
-            <li className="nav-item"><Link href="/"><a className="nav-link active" aria-current="page">Elos</a></Link></li>
-            <li className="nav-item"><Link href="parceiros"><><a className="nav-link">Parceiros</a></></Link></li>
-            <li className="nav-item"><Link href="eventos"><><a className="nav-link">Projetos e Eventos </a></></Link></li>
-            <li className="nav-item"><Link href="blog"><><a className="nav-link">Blog</a></></Link></li>
+            <li className="nav-item"><Link legacyBehavior href="/"><a className="nav-link active" aria-current="page">Elos</a></Link></li>
+            <li className="nav-item"><Link legacyBehavior href="parceiros"><><a className="nav-link">Parceiros</a></></Link></li>
+            <li className="nav-item"><Link legacyBehavior href="eventos"><><a className="nav-link">Projetos e Eventos </a></></Link></li>
+            <li className="nav-item"><Link legacyBehavior href="blog"><><a className="nav-link">Blog</a></></Link></li>
           </ul>
           {/* <!-- Rede Social  --> */}
           <ul className="navbar-nav ml-auto">
