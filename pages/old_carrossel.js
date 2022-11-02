@@ -18,7 +18,7 @@ export default function Carrossel() {
           <div className="carousel-caption d-sd-block">
             <p>Elos de Amor e UniVESP</p>
             <p>
-              <Link href="abrigo"><><a className="btn btn-lg btn-secondary" role="button">Saiba mais</a></></Link>
+              <Link legacyBehavior href="abrigo"><><a className="btn btn-lg btn-secondary" role="button">Saiba mais</a></></Link>
             </p>
           </div>
         </div>
@@ -28,7 +28,7 @@ export default function Carrossel() {
           <div className="carousel-caption d-sd-block">
             <p>Nossos Parceiros</p>
             <p>
-              <Link href="parceiros"><><a className="btn btn-lg btn-secondary" role="button">Confira</a></></Link>
+              <Link legacyBehavior href="parceiros"><><a className="btn btn-lg btn-secondary" role="button">Confira</a></></Link>
             </p>
           </div>
         </div>
@@ -37,16 +37,16 @@ export default function Carrossel() {
           <div className="carousel-caption d-sd-block">
             <p>Projetos e Eventos</p>
             <p>
-              <Link href="eventos"><><a className="btn btn-lg btn-secondary" role="button">Participe</a></></Link>
+              <Link legacyBehavior href="eventos"><><a className="btn btn-lg btn-secondary" role="button">Participe</a></></Link>
             </p>
           </div>
         </div>
       </div>
-      <Link href="#carouselExampleIndicators" ><><a className="carousel-control-prev" role="button" data-slide="prev">
+      <Link legacyBehavior href="#carouselExampleIndicators" ><><a className="carousel-control-prev" role="button" data-slide="prev">
         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
         <span className="sr-only">Anterior</span>
       </a></></Link>
-      <Link href="#carouselExampleIndicators"><a className="carousel-control-next" role="button" data-slide="next">
+      <Link legacyBehavior href="#carouselExampleIndicators"><a className="carousel-control-next" role="button" data-slide="next">
         <span className="carousel-control-next-icon" aria-hidden="true"></span>
         <span className="sr-only">Próximo</span>
       </a></Link>

@@ -62,7 +62,7 @@ export default function test() {
         <div className="carousel-caption d-sd-block">
         <p>{product.title[idx]}</p>
         <p>
-          <Link href="abrigo"><><a className="btn btn-lg btn-secondary" role="button">{product.subtitle[idx]}</a></></Link>
+          <Link legacyBehavior href="abrigo"><><a className="btn btn-lg btn-secondary" role="button">{product.subtitle[idx]}</a></></Link>
         </p>
         </div>
       </div>

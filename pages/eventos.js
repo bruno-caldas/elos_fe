@@ -68,7 +68,7 @@ function EventData({event_data}) {
                           </div>
                         </div>
                         <div className="m-1">
-                          <Link href="https://www.google.com.br/maps/place/{{ evento.local_evento }}"><a className="btn btn-secondary" role="button" target="_blank" rel="noopener noreferrer">Como chegar</a></Link>
+                          <Link legacyBehavior href="https://www.google.com.br/maps/place/{{ evento.local_evento }}"><a className="btn btn-secondary" role="button" target="_blank" rel="noopener noreferrer">Como chegar</a></Link>
                         </div>
                       </div>
                     </div>
