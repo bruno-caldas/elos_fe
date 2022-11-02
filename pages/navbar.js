@@ -20,10 +20,10 @@ export default function Navbar() {
         <!-- Menu -->   */}
         <div className="collapse navbar-collapse" id="navbarMenu">
           <ul className="navbar-nav">
-            <li className="nav-item"><Link legacyBehavior href="/"><a className="nav-link active" aria-current="page">Elos</a></Link></li>
-            <li className="nav-item"><Link legacyBehavior href="parceiros"><><a className="nav-link">Parceiros</a></></Link></li>
-            <li className="nav-item"><Link legacyBehavior href="eventos"><><a className="nav-link">Projetos e Eventos </a></></Link></li>
-            <li className="nav-item"><Link legacyBehavior href="blog"><><a className="nav-link">Blog</a></></Link></li>
+            <li className="nav-item"><Link href="/" className="nav-link active" aria-current="page">Elos</Link></li>
+            <li className="nav-item"><Link href="parceiros" className="nav-link active">Parceiros</Link></li>
+            <li className="nav-item"><Link href="eventos" className="nav-link">Projetos e Eventos</Link></li>
+            <li className="nav-item"><Link href="blog" className="nav-link">Blog</Link></li>
           </ul>
           {/* <!-- Rede Social  --> */}
           <ul className="navbar-nav ml-auto">
